@@ -1,0 +1,103 @@
+* {
+    font-family: 'Quicksand', cursive;
+}
+
+button {
+    background: none;
+    color: black;
+    border-color: grey;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: 0.3s;
+    margin-right: 15px;
+}
+
+button:hover {
+    background: rgba(211, 211, 211, 0.49);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+
+}
+
+a {
+    text-decoration: underline;
+    color: grey;
+    transition: 0.3s;
+}
+
+a:hover {
+    font-weight: bold;
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
+}
+
+/* ------------- NAVBAR ------------------*/
+#navigation-bar {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pageLogo {
+    height: 60px;
+    margin-left: 5%;
+}
+
+.cartPicture {
+    height: 30px;
+}
+
+.nav-link {
+    color: grey;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: black;
+    font-weight: bold;
+}
+
+.active {
+    color: black;
+}
+/* ------------- FOOTER ----------------- */
+#footer {
+    background: white;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.2);
+    color: grey;
+}
+/* ------------- HOME page ------------------*/
+#mainAd {
+    padding-top: 200px;
+    background-image: url("images/backgroundAd.png");
+    background-size: cover;
+    background-position: bottom;
+    height: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------- Contacts page ------------------*/
+#contact-icons .contact-icon-img {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    object-fit: scale-down;
+}
+
+
+/* ------------- About page ------------------*/
+#banner-about-us {
+    background-color: rgba(255, 255, 224, 0.45);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
