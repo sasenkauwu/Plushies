@@ -42,15 +42,12 @@ function checkRegistrationForm() {
     return true;
 }
 
-// Táto funkcia sa volá, keď sa pokúšaš odoslať registračný formulár
 function submitRegistrationForm() {
 
-    // Volá funkciu checkRegistrationForm, ktorá overuje, či sú všetky polia formulára správne vyplnené
     if (!checkRegistrationForm()) {
         return false;
     }
 
-    // Pokračuje v spracovaní, ak prešiel validáciou formulára
     const user = {
         name: document.getElementById('inputName').value,
         surname: document.getElementById('inputSurname').value,
@@ -64,22 +61,18 @@ function submitRegistrationForm() {
         country: document.getElementById('inputCountry').value
     };
 
-    // Tu sa vykoná AJAX volanie na serverový endpoint '/user/registerUser'
     fetch('/user/registerUser', {
-        method: 'POST', // Metóda HTTP požiadavky je POST
+        method: 'POST',
         headers: {
-            'Content-Type': 'application/json', // Hlavička nastavuje typ obsahu na JSON
+            'Content-Type': 'application/json',
         },
-        body: JSON.stringify(user) // Telo požiadavky obsahuje JSON reprezentáciu objektu user
+        body: JSON.stringify(user)
     })
         .then(response => {
-            // Táto časť sa spustí, keď server odpovie na požiadavku
             if (!response.ok) {
-                // Ak server vrátil chybový stav, zaloguje sa chyba a skončí spracovanie
                 console.error('Server returned an error response');
                 return;
             }
-            // Ak server vrátil úspešný stav, prevedie sa odpoveď na JSON
             return response.json();
         })
         .then(data => {
@@ -94,14 +87,45 @@ function submitRegistrationForm() {
             document.getElementById('inputCity').value = '';
             document.getElementById('inputZip').value = '';
             document.getElementById('inputCountry').value = '';
-            // Táto časť sa spustí, keď sa úspešne prevedie odpoveď na JSON
-            console.log('Success:', data); // Zaloguje sa úspešná odpoveď
+
+            window.location.href = '/login';
+            console.log('Success:', data);
         })
         .catch((error) => {
-            // Ak nastane chyba počas odosielania alebo spracovania požiadavky, zaloguje sa chyba
             console.error('Error:', error);
         });
+    return false;
+}
 
-    // Zabraňuje štandardnému spracovaniu odoslania formulára (čo by obnovilo stránku)
+function loginUser() {
+    var email = document.getElementById("inputEmail").value;
+    var password = document.getElementById("inputPassword").value;
+
+    fetch('/user/loginUser', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({email: email, password: password})
+    })
+
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Invalid email or password.');
+            }
+        })
+
+        .then(data => {
+            alert('You have been logged in successfully.')
+            console.log(data);
+            // neskor presmerovanie dokoncit window.location.href = '/home';
+        })
+
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Invalid email or password.')
+        })
     return false;
 }

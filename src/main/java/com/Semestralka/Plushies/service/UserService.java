@@ -4,6 +4,7 @@ import com.Semestralka.Plushies.entity.Address;
 import com.Semestralka.Plushies.entity.User;
 import com.Semestralka.Plushies.repository.AddressRepository;
 import com.Semestralka.Plushies.repository.UserRepository;
+import com.Semestralka.Plushies.request.UserLoginRequest;
 import com.Semestralka.Plushies.request.UserRegistrationSaveRequest;
 import com.Semestralka.Plushies.request.UserSaveRequest;
 import lombok.RequiredArgsConstructor;
@@ -58,6 +59,14 @@ public class UserService {
 
         addressRepository.save(address);
         userRepository.save(user);
+    }
+
+    public boolean loginUser(UserLoginRequest loginRequest) {
+        User foundUser = userRepository.findByEmail(loginRequest.getEmail());
+        if (foundUser != null && foundUser.getPassword().equals(loginRequest.getPassword())) {
+            return true;
+        }
+        return false;
     }
 
     public void deleteUser(UUID id) {

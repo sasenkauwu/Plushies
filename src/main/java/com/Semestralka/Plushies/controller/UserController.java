@@ -1,9 +1,11 @@
 package com.Semestralka.Plushies.controller;
 
 import com.Semestralka.Plushies.entity.User;
+import com.Semestralka.Plushies.request.UserLoginRequest;
 import com.Semestralka.Plushies.request.UserRegistrationSaveRequest;
 import com.Semestralka.Plushies.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +31,14 @@ public class UserController {
     public ResponseEntity<String> registerUser(@RequestBody UserRegistrationSaveRequest saveRequest) {
         userService.registerUser(saveRequest);
         return ResponseEntity.ok("User registered successfully");
+    }
+
+    @PostMapping("/loginUser")
+    public ResponseEntity<String> loginUser(@RequestBody UserLoginRequest loginRequest) {
+        if (userService.loginUser(loginRequest)) {
+            return ResponseEntity.ok("User logged in successfully.");
+        }
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid email or password.");
     }
 
     @DeleteMapping("/delete/{id}")
