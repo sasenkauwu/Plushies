@@ -1,12 +1,9 @@
 package com.Semestralka.Plushies.controller;
 
 import com.Semestralka.Plushies.entity.Address;
-import com.Semestralka.Plushies.entity.User;
 import com.Semestralka.Plushies.request.AddressSaveRequest;
-import com.Semestralka.Plushies.request.UserRegistrationSaveRequest;
 import com.Semestralka.Plushies.service.AddressService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;

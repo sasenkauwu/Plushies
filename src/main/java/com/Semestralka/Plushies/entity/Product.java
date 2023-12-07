@@ -13,7 +13,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Data
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

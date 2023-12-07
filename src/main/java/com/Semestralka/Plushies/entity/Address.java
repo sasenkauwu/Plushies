@@ -1,5 +1,6 @@
 package com.Semestralka.Plushies.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -13,7 +14,6 @@ import java.util.UUID;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Data
 public class Address {
 
         @Id
@@ -22,6 +22,7 @@ public class Address {
         @OneToOne
         @MapsId
         @JoinColumn(name = "pouzivatel_id")
+        @JsonIgnore
         private User user;
 
         private String street;

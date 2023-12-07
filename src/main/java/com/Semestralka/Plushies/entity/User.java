@@ -1,5 +1,6 @@
 package com.Semestralka.Plushies.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -14,13 +15,13 @@ import java.util.UUID;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, optional = false)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = false)
+    @JsonIgnore
     private Address address;
 
     private String name;

@@ -17,9 +17,12 @@ import java.util.UUID;
 public class UserController {
     private final UserService userService;
 
-    @GetMapping("/{id}")
-    public User getUser(@PathVariable UUID id) {
-        return userService.getUser(id);
+    @GetMapping("/getUser")
+    public ResponseEntity<User> getUser(@RequestParam String email) {
+        if (userService.getUser(email) != null) {
+            return ResponseEntity.ok(userService.getUser(email));
+        }
+        return ResponseEntity.notFound().build();
     }
 
     @PostMapping("/save")

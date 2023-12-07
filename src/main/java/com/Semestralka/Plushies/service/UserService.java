@@ -20,8 +20,8 @@ public class UserService {
     private final AddressRepository addressRepository;
 
 
-    public User getUser(UUID id) {
-        return userRepository.findById(id).get();
+    public User getUser(String email) {
+        return userRepository.findByEmail(email);
     }
 
     public void saveUser(UserSaveRequest request) {
