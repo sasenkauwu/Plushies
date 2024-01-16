@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title>Return Policy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}">
@@ -34,55 +34,55 @@
     </div>
 </nav>
 
-<div class="container">
-    <form class="row g-3 mt-4 ml-4 align-items-center" onsubmit="return submitRegistrationForm()">
-        <h1>Registration</h1>
-        <div class="col-md-6">
-            <label for="inputName" class="form-label">First Name <span class="error-message" id="inputNameError"></span></label>
-            <input type="text" class="form-control" placeholder="e.g. Peter" id="inputName">
-        </div>
-        <div class="col-md-6">
-            <label for="inputSurname" class="form-label">Last Name <span class="error-message" id="inputSurnameError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Navrátil" id="inputSurname">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail" class="form-label">E-mail <span class="error-message" id="inputEmailError"></span> </label>
-            <input type="email" class="form-control" placeholder="e.g. peter123@gmail.com" id="inputEmail">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPhone" class="form-label">Phone Number <span class="error-message" id="inputPhoneError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. 0944228596" id="inputPhone">
-        </div>
-        <div class="col-md-6">
-            <label for="inputUsername" class="form-label">Username <span class="error-message" id="inputUsernameError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Petko123" id="inputUsername">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword" class="form-label">Password <span class="error-message" id="inputPasswordError"></span> </label>
-            <input type="password" class="form-control" placeholder="insert your password" id="inputPassword">
-        </div>
-        <div class="col-12">
-            <label for="inputStreet" class="form-label">Street name <span class="error-message" id="inputStreetError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Poľná 5654/85" id="inputStreet">
-        </div>
-        <div class="col-md-6">
-            <label for="inputCity" class="form-label">City <span class="error-message" id="inputCityError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Ružomberok" id="inputCity">
-        </div>
-        <div class="col-md-6">
-            <label for="inputZip" class="form-label">Zip code <span class="error-message" id="inputZipError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. 03401" id="inputZip" >
-        </div>
-        <div class="col-12">
-            <label for="inputCountry" class="form-label">Country <span class="error-message" id="inputCountryError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Slovak Republic" id="inputCountry">
-        </div>
-        <div class="col mb-5 d-flex justify-content-center align-items-center">
-            <button type="submit">Create account</button>
-            <p class="mb-0">Already registered? <a th:href="@{/login}">Login here</a></p>
-        </div>
-    </form>
+
+<div class="container-xl">
+    <h1 class="pt-5">Return Policy for Plushies.</h1>
+    <ul>
+        <li>You have 15 days from the date of your original purchase to make a return.</li>
+        <li>Returned items must be postmarked within 10 days of the purchase date.</li>
+    </ul>
+    <h3>3. Return Condition</h3>
+    <p>To be eligible for a return, your item must be:</p>
+    <ul>
+        <li>Unused and in the same condition that you received it.</li>
+        <li>In the original packaging with all tags intact.</li>
+        <li>Accompanied by the original receipt or proof of purchase.</li>
+    </ul>
+    <h3>4. Non-returnable Items</h3>
+    <p>Certain types of items cannot be returned, such as:</p>
+    <ul>
+        <li>Customized or personalized items.</li>
+        <li>Sale items (if applicable).</li>
+        <li>Gift cards.</li>
+        <li>Products that have been used or altered.</li>
+    </ul>
+    <h3>5. Processing Returns</h3>
+    <p>To return your product, please follow these steps:</p>
+    <ul>
+        <li>Contact us at plushies.info@blabla.com to initiate the return process.</li>
+        <li>We will provide you with a return shipping label and instructions on how and where to send your package.</li>
+        <li>You will be responsible for paying for your own shipping costs for returning your item, unless the return is due to our error (e.g., defective or incorrect item).</li>
+    </ul>
+    <h3>6. Refunds</h3>
+    <p>Once your return is received and inspected, we will send you a notification of the receipt of the returned item. We will also notify you of the approval or rejection of your refund.</p>
+    <ul>
+        <li>If approved, your refund will be processed, and a credit will automatically be applied to your original method of payment, within a certain amount of days.</li>
+    </ul>
+    <h3>7. Exchanges</h3>
+    <p>We only replace items if they are defective or damaged. If you need to exchange an item for the same item, send us an email at [contact information] and send your item to the return address provided.</p>
+    <h3>8. Gifts</h3>
+    <p>If the item was marked as a gift when purchased and shipped directly to you, you’ll receive a gift credit for the value of your return. Once the returned item is received, a gift certificate will be mailed to you.</p>
+    <h3>9. Contact Us</h3>
+    <p>If you have any questions about our return policy, please contact us at:</p>
+    <ul>
+        <li>Address: Hurbanova 37, Dubnica nad Váhom</li>
+        <li>Phone number: +421 955 338 485</li>
+        <li>E-mail address: plushies.info@blabla.com</li>
+    </ul>
+    <p>Thank you for shopping at Plushies.</p>
+    <p class="pt-5">This policy is effective as of 17. 11. 2023</p>
 </div>
+
 
 <!-- FOOTER -->
 <div id="footer" class="container-fluid">
@@ -129,8 +129,6 @@
         </div>
     </div>
 </div>
-
-<script th:src="@{/registrationScript.js}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+    <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<!-- BOOTSTRAP NAVBAR -->
+<nav id="navigation-bar" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand">
+            <img th:src="@{images/navigationBar/logo.png}" class="pageLogo" alt="Plushie logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" th:href="@{/home}">Home</a>
+                <a class="nav-link" th:href="@{/products}">Products</a>
+                <a class="nav-link" th:href="@{/aboutUs}">About Us</a>
+                <a class="nav-link" th:href="@{/contacts}">Contacts</a>
+                <a class="nav-link" th:href="@{/profile}">Profile</a>
+                <a class="nav-link" th:href="@{/cart}">
+                    <img th:src="@{images/navigationBar/cart.png}" class="cartPicture" alt="Cart">
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- main ad -->
+<div id="mainAd" class="container-fluid">
+    <div class="row justify-content-center"></div>
+        <div class="col text-center">
+            <h1 class="display-2">
+                The kingdom of plush toys
+            </h1>
+            <p>
+                Cute stuffed animals, plush toys, Teddy Bears and more!
+            </p>
+            <button class="shopNow" onclick="window.location.href = 'products.html'">
+                Shop now
+            </button>
+        </div>
+</div>
+
+<!-- trending -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <h1 class="mt-4">Currently Trending</h1>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/dinosaur-plush.jpg}" class="card-img-top" alt="Jumbo Dinosaur Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Jumbo Dinosaur Plush</h6>
+                    <p class="card-text">€17,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/racoon-plush.jpg}" class="card-img-top" alt="Lying Racoon Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Lying Racoon Plush</h6>
+                    <p class="card-text">€25,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/muscle-bear-plush.jpg}" class="card-img-top" alt="Muscle Bear Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Muscle Bear Plush</h6>
+                    <p class="card-text">€15,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/muscle-bear-plush.jpg}" class="card-img-top" alt="Muscle Bear Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Muscle Bear Plush</h6>
+                    <p class="card-text">€15,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/muscle-bear-plush.jpg}" class="card-img-top" alt="Muscle Bear Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Muscle Bear Plush</h6>
+                    <p class="card-text">€15,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/muscle-bear-plush.jpg}" class="card-img-top" alt="Muscle Bear Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Muscle Bear Plush</h6>
+                    <p class="card-text">€15,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <button class="mb-3 col-10" onclick="window.location.href = 'products.html'">View All</button>
+    </div>
+</div>
+
+<!-- SALE -->
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-6 d-flex mt-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/40off.png}" class="card-img-top}" alt="40% off">
+                <div class="card-body">
+                    <p class="card-text">GET YOUR DISCOUNT NOW!</p>
+                    <h5 class="card-title ">Up to 40% Off on all plush toys</h5>
+                    <p class="card-text">Snuggle up with a special deal! Our adorable plushies are now more huggable than ever with a heartwarming discount just for you</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex mt-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/20off.png}" class="card-img-top}" alt="40% off">
+                <div class="card-body">
+                    <p class="card-text">GET YOUR DISCOUNT NOW!</p>
+                    <h5 class="card-title ">Up to 20% Off for all new users</h5>
+                    <p class="card-text">Get your discount by registration to our website!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NEW PLUSHIES -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <h1>New Plushies</h1>
+        <p>The lastest and greatest plushies on market!</p>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/dinosaur-plush.jpg}" class="card-img-top" alt="Jumbo Dinosaur Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Jumbo Dinosaur Plush</h6>
+                    <p class="card-text">€17,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/dinosaur-plush.jpg}" class="card-img-top" alt="Jumbo Dinosaur Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Jumbo Dinosaur Plush</h6>
+                    <p class="card-text">€17,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/dinosaur-plush.jpg}" class="card-img-top" alt="Jumbo Dinosaur Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Jumbo Dinosaur Plush</h6>
+                    <p class="card-text">€17,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-6 d-flex my-3">
+            <div class="card flex-fill">
+                <img th:src="@{images/plush-images/dinosaur-plush.jpg}" class="card-img-top" alt="Jumbo Dinosaur Plush">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Jumbo Dinosaur Plush</h6>
+                    <p class="card-text">€17,95</p>
+                    <button>Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <button class="mb-3 col-10" onclick="window.location.href = 'products.html'">View All</button>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footer" class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-xs-12 d-flex flex-column align-items-center">
+            <h5 class="pt-3 fw-bold">Quick Links</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <a th:href="@{/home}">Home</a>
+                </li>
+                <li>
+                    <a th:href="@{/products}">Products</a>
+                </li>
+                <li>
+                    <a th:href="@{/aboutUs}">About Us</a>
+                </li>
+                <li>
+                    <a th:href="@{/contacts}">Contacts</a>
+                </li>
+                <li>
+                    <a th:href="@{/profile}">Profile</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-xs-12 d-flex flex-column align-items-center">
+            <h5 class="pt-3 fw-bold">Policy</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <a th:href="@{/privacyPolicy}">Privacy Policy</a>
+                </li>
+                <li>
+                    <a th:href="@{/returnPolicy}">Return Policy</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4 col-xs-12 d-flex flex-column align-items-center">
+            <h5 class="pt-3 fw-bold">Contact Us</h5>
+            <ul class="list-unstyled">
+                <li> Need to contact us? Feel free to head <a class="fw-bold text-dark" href="contacts.html"> here </a></li>
+                <li>
+                    <a href="#">plushies.info@blabla.com</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

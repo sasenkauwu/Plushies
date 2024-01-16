@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
-    <title>Registration</title>
+    <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
     <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}">
@@ -23,7 +23,7 @@
             <div class="navbar-nav">
                 <a class="nav-link" th:href="@{/home}">Home</a>
                 <a class="nav-link" th:href="@{/products}">Products</a>
-                <a class="nav-link" th:href="@{/aboutUs}">About Us</a>
+                <a class="nav-link active" aria-current="page" th:href="@{/aboutUs}">About Us</a>
                 <a class="nav-link" th:href="@{/contacts}">Contacts</a>
                 <a class="nav-link" th:href="@{/profile}">Profile</a>
                 <a class="nav-link" th:href="@{/cart}">
@@ -34,54 +34,30 @@
     </div>
 </nav>
 
-<div class="container">
-    <form class="row g-3 mt-4 ml-4 align-items-center" onsubmit="return submitRegistrationForm()">
-        <h1>Registration</h1>
-        <div class="col-md-6">
-            <label for="inputName" class="form-label">First Name <span class="error-message" id="inputNameError"></span></label>
-            <input type="text" class="form-control" placeholder="e.g. Peter" id="inputName">
+<!-- ABOUT US BANNER -->
+<div id="banner-about-us" class="container-fluid">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-3 col-4">
+            <h1>About Plushies</h1>
         </div>
-        <div class="col-md-6">
-            <label for="inputSurname" class="form-label">Last Name <span class="error-message" id="inputSurnameError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Navrátil" id="inputSurname">
+        <div class="col-md-9 col-8">
+            <img th:src="@{images/banner-about-us.png}" class="img-fluid h-3" alt="Banner About Us">
         </div>
-        <div class="col-md-6">
-            <label for="inputEmail" class="form-label">E-mail <span class="error-message" id="inputEmailError"></span> </label>
-            <input type="email" class="form-control" placeholder="e.g. peter123@gmail.com" id="inputEmail">
+    </div>
+</div>
+
+<!-- ABOUT US TEXT -->
+<div class="container-fluid">
+    <div class="row justify-content-around my-5">
+        <div class="col m-5">
+            <h1>About Us</h1>
+            <p>Welcome to Plushies, the cozy corner of the internet where joy and comfort converge in the form of stuffed animals and plush toys. Born out of a love for softness and smiles, Plushies has been bringing delight to customers of all ages since 2023.</p>
+            <p>At Plushies, we believe that everyone deserves a cuddly companion, and our mission is to provide just that—a friend for life. Our shelves are lined with a delightful array of creatures, from the classic Teddy Bears that remind us of childhood innocence to an imaginative menagerie of plush creations that cater to the unique and whimsical tastes of the young at heart.</p>
+            <p>Each of our plush toys is crafted with care and chosen for its quality, charm, and the ability to spark joy. Whether you're looking for a comforting snuggle buddy, a cheerful playmate, or a unique gift, we have something that will embrace your heart with softness and warmth.</p>
+            <p>Our journey began with a simple idea: to spread happiness through the tender touch of a stuffed friend. As we've grown, so has our commitment to fostering connections, creating memories, and offering a personal touch that turns first-time visitors into lifelong customers.</p>
+            <p>At Plushies, we're not just an e-shop; we're a community of plush enthusiasts who share stories, laughter, and love. We invite you to become a part of our story and find the plush pal that speaks to you. Embrace the world of Plushies, where every hug feels like home.</p>
         </div>
-        <div class="col-md-6">
-            <label for="inputPhone" class="form-label">Phone Number <span class="error-message" id="inputPhoneError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. 0944228596" id="inputPhone">
-        </div>
-        <div class="col-md-6">
-            <label for="inputUsername" class="form-label">Username <span class="error-message" id="inputUsernameError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Petko123" id="inputUsername">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword" class="form-label">Password <span class="error-message" id="inputPasswordError"></span> </label>
-            <input type="password" class="form-control" placeholder="insert your password" id="inputPassword">
-        </div>
-        <div class="col-12">
-            <label for="inputStreet" class="form-label">Street name <span class="error-message" id="inputStreetError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Poľná 5654/85" id="inputStreet">
-        </div>
-        <div class="col-md-6">
-            <label for="inputCity" class="form-label">City <span class="error-message" id="inputCityError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Ružomberok" id="inputCity">
-        </div>
-        <div class="col-md-6">
-            <label for="inputZip" class="form-label">Zip code <span class="error-message" id="inputZipError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. 03401" id="inputZip" >
-        </div>
-        <div class="col-12">
-            <label for="inputCountry" class="form-label">Country <span class="error-message" id="inputCountryError"></span> </label>
-            <input type="text" class="form-control" placeholder="e.g. Slovak Republic" id="inputCountry">
-        </div>
-        <div class="col mb-5 d-flex justify-content-center align-items-center">
-            <button type="submit">Create account</button>
-            <p class="mb-0">Already registered? <a th:href="@{/login}">Login here</a></p>
-        </div>
-    </form>
+    </div>
 </div>
 
 <!-- FOOTER -->
@@ -130,7 +106,6 @@
     </div>
 </div>
 
-<script th:src="@{/registrationScript.js}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

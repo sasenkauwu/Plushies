@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+  <link rel="stylesheet" th:href="@{https://pro.fontawesome.com/releases/v5.10.0/css/all.css}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<!-- BOOTSTRAP NAVBAR -->
+<nav id="navigation-bar" class="navbar navbar-expand-lg navbar-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img th:src="@{images/navigationBar/logo.png}" class="pageLogo" alt="Plushie logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" th:href="@{/home}">Home</a>
+        <a class="nav-link" th:href="@{/products}">Products</a>
+        <a class="nav-link" th:href="@{/aboutUs}">About Us</a>
+        <a class="nav-link" th:href="@{/contacts}">Contacts</a>
+        <a class="nav-link" th:href="@{/profile}">Profile</a>
+        <a class="nav-link" th:href="@{/cart}">
+          <img th:src="@{images/navigationBar/cart.png}" class="cartPicture" alt="Cart">
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="div container-xl">
+  <h1 class="pt-5">Privacy Policy for Plushies.</h1>
+  <h3>1. Introduction</h3>
+  <p> Welcome to Plushies, your premier source for plush toys, stuffed animals, and teddy bears. We are committed to protecting the privacy and security of our customers' information. This privacy policy outlines our practices concerning the collection, use, and sharing of your personal data.</p>
+  <h3>2. Information We Collect</h3>
+  <p>When you visit Plushies, we may collect the following types of information:</p>
+  <ul>
+    <li>Personal Identification Information: Name, email address, shipping address, payment information, and other details necessary to process your purchase or respond to customer service inquiries.</li>
+    <li>Non-Personal Identification Information: Browser details, IP address, cookies, pixels, and other tracking technologies to enhance your user experience and analyze site usage.</li>
+  </ul>
+  <h3>3. How We Use Your Information</h3>
+  <p>The information we collect may be used in the following ways:</p>
+  <ul>
+    <li>To process transactions and deliver products purchased on our site.</li>
+    <li>To communicate with you about order status, updates, promotional offers, and surveys.</li>
+    <li>To improve our website offerings based on your information and feedback.</li>
+    <li>To prevent, detect, and investigate potentially prohibited or illegal activities, including fraud, and enforce our terms.</li>
+  </ul>
+  <h3>4. Information Protection</h3>
+  <p>We implement a variety of security measures to maintain the safety of your personal information. Your personal data is contained behind secured networks and is only accessible by a limited number of persons who have special access rights and are required to keep the information confidential.</p>
+  <h3>5. Data Sharing</h3>
+  <p>We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, as long as those parties agree to keep this information confidential.</p>
+  <h3>6. Your Rights</h3>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access and receive a copy of your personal data.</li>
+    <li>Rectify inaccurate personal data.</li>
+    <li>Request the deletion of your personal data.</li>
+    <li>Withdraw your consent for data processing at any time.</li>
+  </ul>
+  <h3>7. Cookies</h3>
+  <p>Cookies are small files that a site or its service provider transfers to your computer's hard drive through your Web browser (if you allow) that enables the site's or service provider's systems to recognize your browser and capture and remember certain information.</p>
+  <h3>8. Third-Party Links</h3>
+  <p>Occasionally, at our discretion, we may include or offer third-party products or services on our website. These third-party sites have separate and independent privacy policies.</p>
+  <h3>9. Changes to Our Privacy Policy</h3>
+  <p>We may update this privacy policy periodically to reflect changes to our information practices. We encourage you to periodically review this page for the latest information on our privacy practices.</p>
+  <h3>10. Contacting Us</h3>
+  <p>If there are any questions regarding this privacy policy, you may contact us using the information below:</p>
+  <ul>
+    <li>Address: Hurbanova 37, Dubnica nad Váhom</li>
+    <li>Phone number: +421 955 338 485</li>
+    <li>E-mail address: plushies.info@blabla.com</li>
+  </ul>
+  <p class="pt-5">This policy is effective as of 17. 11. 2023</p>
+</div>
+
+
+<!-- FOOTER -->
+<div id="footer" class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-4 col-xs-12 d-flex flex-column align-items-center">
+      <h5 class="pt-3 fw-bold">Quick Links</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a th:href="@{/home}">Home</a>
+        </li>
+        <li>
+          <a th:href="@{/products}">Products</a>
+        </li>
+        <li>
+          <a th:href="@{/aboutUs}">About Us</a>
+        </li>
+        <li>
+          <a th:href="@{/contacts}">Contacts</a>
+        </li>
+        <li>
+          <a th:href="@{/profile}">Profile</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-xs-12 d-flex flex-column align-items-center">
+      <h5 class="pt-3 fw-bold">Policy</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a th:href="@{/privacyPolicy}">Privacy Policy</a>
+        </li>
+        <li>
+          <a th:href="@{/returnPolicy}">Return Policy</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-4 col-xs-12 d-flex flex-column align-items-center">
+      <h5 class="pt-3 fw-bold">Contact Us</h5>
+      <ul class="list-unstyled">
+        <li> Need to contact us? Feel free to head <a class="fw-bold text-dark" href="contacts.html"> here </a></li>
+        <li>
+          <a href="#">plushies.info@blabla.com</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
