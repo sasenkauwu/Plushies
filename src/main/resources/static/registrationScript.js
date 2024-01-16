@@ -148,7 +148,7 @@ function loginUser() {
         .then(data => {
             alert('You have been logged in successfully.')
             console.log(data);
-            // neskor presmerovanie dokoncit window.location.href = '/home';
+            window.location.href = '/home';
         })
 
         .catch(error => {
@@ -157,3 +157,41 @@ function loginUser() {
         })
     return false;
 }
+
+// Príklad nastavenia hodnoty pri prihlásení
+function setLoginStatusInClient() {
+    sessionStorage.setItem('isLoggedIn', 'true');
+}
+
+// Príklad odstránenia hodnoty pri odhlásení
+function clearLoginStatusInClient() {
+    sessionStorage.removeItem('isLoggedIn');
+}
+
+// Logika na overenie, či je užívateľ prihlásený
+const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+
+
+function checkLoginStatusAndUpdateUI() {
+    fetch('/user/checkSession')
+        .then(response => response.json())
+        .then(isLoggedIn => {
+            if (isLoggedIn) {
+                // Užívateľ je prihlásený, zobrazte alebo skryte príslušné prvky UI
+                document.querySelector('.nav-link[href="/profile"]').style.display = 'block';
+                document.querySelector('.nav-link[href="/login"]').style.display = 'none';
+            } else {
+                // Užívateľ nie je prihlásený
+                document.querySelector('.nav-link[href="/profile"]').style.display = 'none';
+                document.querySelector('.nav-link[href="/login"]').style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// Volajte túto funkciu pri načítaní stránky alebo po určitých udalostiach
+checkLoginStatusAndUpdateUI();
+
+

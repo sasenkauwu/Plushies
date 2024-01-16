@@ -25,7 +25,8 @@
         <a class="nav-link" th:href="@{/products}">Products</a>
         <a class="nav-link" th:href="@{/aboutUs}">About Us</a>
         <a class="nav-link" th:href="@{/contacts}">Contacts</a>
-        <a class="nav-link" th:href="@{/profile}">Profile</a>
+        <a class="nav-link" th:href="@{/login}" th:if="${!isLoggedIn}">Login</a>
+        <a class="nav-link" th:href="@{/profile}" th:if="${isLoggedIn}">Profile</a>
         <a class="nav-link" th:href="@{/cart}">
           <img th:src="@{images/navigationBar/cart.png}" class="cartPicture" alt="Cart">
         </a>

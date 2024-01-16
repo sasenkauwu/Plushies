@@ -61,12 +61,12 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public boolean loginUser(UserLoginRequest loginRequest) {
+    public User loginUser(UserLoginRequest loginRequest) {
         User foundUser = userRepository.findByEmail(loginRequest.getEmail());
         if (foundUser != null && foundUser.getPassword().equals(loginRequest.getPassword())) {
-            return true;
+            return foundUser;
         }
-        return false;
+        return null;
     }
 
     public void deleteUser(UUID id) {
