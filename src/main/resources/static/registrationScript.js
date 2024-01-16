@@ -12,32 +12,60 @@ function checkRegistrationForm() {
         'inputCountry': 'Please fill out your Country.'
     };
 
+    let isFormValid = true;
+
     for (const fieldId in fields) {
         if (fields.hasOwnProperty(fieldId)) {
+            const field = document.getElementById(fieldId);
+            const errorElementId = fieldId + 'Error';
+            const errorElement = document.getElementById(errorElementId);
+            field.classList.remove('is-invalid');
+            errorElement.textContent = '';
+        }
+    }
+
+    for (const fieldId in fields) {
+        if (fields.hasOwnProperty(fieldId)) {
+            const field = document.getElementById(fieldId);
             const fieldValue = document.getElementById(fieldId).value;
             const errorMessage = fields[fieldId];
+            const errorElementId = fieldId + 'Error';
+            const errorElement = document.getElementById(errorElementId);
 
             if (!fieldValue) {
-                alert(errorMessage);
-                return false;
+                errorElement.textContent = errorMessage;
+                field.classList.add('is-invalid');
+                isFormValid = false;
+            } else {
+                field.classList.remove('is-invalid');
+                errorElement.textContent = '';
+                isFormValid = true;
             }
+
             if (fieldId === "inputEmail" && !fieldValue.includes('@')) {
-                alert('Please enter a valid e-mail address.');
-                return false;
+                errorElement.textContent = 'Please enter a valid e-mail address.';
+                field.classList.add('is-invalid');
+                isFormValid = false;
             }
             if (fieldId === 'inputPassword' && fieldValue.length < 8) {
-                alert('Password must be at least 8 characters long.');
-                return false;
+                errorElement.textContent = 'Password must be at least 8 characters long.';
+                field.classList.add('is-invalid');
+                isFormValid = false;
             }
             if (fieldId === 'inputPhone' && !/^\d{10}$/.test(fieldValue)) {
-                alert('Phone number is in wrong format.');
-                return false;
+                errorElement.textContent = 'Phone number is in wrong format.';
+                field.classList.add('is-invalid');
+                isFormValid = false;
             }
             if (fieldId === 'inputZip' && !/^\d{5}$/.test(fieldValue)) {
-                alert('Zip code is not in valid format.');
-                return false;
+                errorElement.textContent = 'Zip code is not in valid format.';
+                field.classList.add('is-invalid');
+                isFormValid = false;
             }
         }
+    }
+    if (!isFormValid) {
+        return false;
     }
     return true;
 }

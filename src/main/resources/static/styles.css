@@ -19,7 +19,6 @@ button {
 button:hover {
     background: rgba(211, 211, 211, 0.49);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2)
-
 }
 
 a {
@@ -96,6 +95,10 @@ a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* -------------Registration ----------------*/
+.error-message {
+    color: red;
+}
 
 
 
